@@ -1,0 +1,22 @@
+class Valorant:
+  def __init__(self,agent_name):
+    self.agent_nam=agent_name
+
+  def show_details(self):
+    print(f"Name:{self.agent_nam}")
+
+class agent_details(Valorant):
+  def __init__(self,agent_name,agent_cat,agent_sig):
+    Valorant.__init__(self,agent_name)
+    self.agent_sig=agent_sig
+    self.agent_cat=agent_cat
+    
+    def show_details(self):
+      Valorant.show_details(self)
+      print(f"Type:{self.agent_cat}")
+      print(f"Signature:{self.agent_sig}")
+
+a=agent_details("brim","controller","smokes")
+a.show_details()
+
+    
