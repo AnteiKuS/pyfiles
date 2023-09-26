@@ -1,7 +1,11 @@
-import win32com.client
+try:
+  import win32com.client
 
-speaker=win32com.client.Dispatch("SAPI.SpVoice")
-names=["Rahul","Nishant","Harry"]
-for name in names:
-  print(f"Shoutout to {name}")
-  speaker.Speak(f"Shoutout to {name}")
+  speaker=win32com.client.Dispatch("SAPI.SpVoice")
+  names=["Rahul","Nishant","Harry"]
+  for name in names:
+    print(f"Shoutout to {name}")
+    speaker.Speak(f"Shoutout to {name}")
+
+except ModuleNotFoundError:
+  print("No module name WIN32COM!, try to run on cmd")
