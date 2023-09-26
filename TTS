@@ -1,0 +1,7 @@
+import win32com.client
+
+speaker=win32com.client.Dispatch("SAPI.SpVoice")
+names=["Rahul","Nishant","Harry"]
+for name in names:
+  print(f"Shoutout to {name}")
+  speaker.Speak(f"Shoutout to {name}")
